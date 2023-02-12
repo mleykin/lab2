@@ -40,7 +40,7 @@ public class Counter {
             }
 
             try {
-                for(int j = 0; j < 150; ++j) {
+                for(int j = 0; j < 256; ++j) {
                     if (this.counter[j] != 0) {
                         if ((char)j != '\n') {
                             this.output.append((char)j+" = "+Integer.toString(this.counter[j])+'\n');
