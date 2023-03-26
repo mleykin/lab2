@@ -22,7 +22,7 @@ public class Counter {
         }
 
         for(int i = 0; i < 256; ++i) {
-            this.counter[i] = 0;
+            this.counter[i] = 0;      //не нужно в Java, там и так нули
         }
 
     }
@@ -32,11 +32,11 @@ public class Counter {
             try {
                 int c;
                 if ((c = this.input.read()) != -1) {
-                    int var10002 = this.counter[c]++;
+                    int var10002 = this.counter[c]++;    //зачем нужна эта переменная если она нгде не используется?
                     continue;
                 }
             } catch (IOException var3) {
-                System.exit(1);
+                System.exit(1);       //плохой способ выхода из цикла, достаточно было бы return;
             }
 
             try {
